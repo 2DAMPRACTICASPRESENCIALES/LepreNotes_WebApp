@@ -9,15 +9,15 @@ function startPage()  // Web App start
   include('./view/header_view.php');
   include('./view/login_view.php');
   require('./model/login_model.php');
+  include('./view/footer_view.php');
   checkLogin(); 
-
 }
 
 function listPage() {
-  $conecction = new Conecction(); //Creamos un objeto conexion
-  $conecction->getConection(); //Abrimos conexion
   include('./view/header_view.php');
+  require_once('./model/notes_model.php');
+  require_once('./model/order_model.php');
   include('./view/listPage_view.php');
-
+  include('./view/footer_view.php');
 }
 
