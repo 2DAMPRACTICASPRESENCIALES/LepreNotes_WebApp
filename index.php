@@ -1,8 +1,8 @@
 <?php
 session_start();
 define('CONTROLLER_FOLDER', "controller/"); //Directorio donde definimos los controladores
-define('DEFAULT_CONTROLLER', "category"); //Controlador por defecto
-define('DEFAULT_ACTION', "initial"); //Accion por defecto
+define('DEFAULT_CONTROLLER', "initial"); //Controlador por defecto
+define('DEFAULT_ACTION', "startPage"); //Accion por defecto
 
 //Obtenemos el controlador. Si no por defecto
 $controller = DEFAULT_CONTROLLER;

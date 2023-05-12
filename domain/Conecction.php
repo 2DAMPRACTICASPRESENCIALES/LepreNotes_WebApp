@@ -18,10 +18,11 @@ class Conecction
             $dsn = "mysql:host=$server;dbname=$dbname;charset=UTF8";
             $dbh = new PDO($dsn, $user, $password);
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo 'CONECCTION SUCCESS!!!';
 
         } catch (PDOException $e) {
             echo $e->getMessage();
-            redirect('errorpagePDO_view.php');
+        
         }
         return $dbh;
     }
