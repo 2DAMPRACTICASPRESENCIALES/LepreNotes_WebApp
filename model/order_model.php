@@ -36,7 +36,7 @@
             $stmt->bindParam(':code', $code, PDO::PARAM_STR);
             $stmt->bindParam(':order_date', $orderDate, PDO::PARAM_STR);
             $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
-            $stmt->bindParam(':note_id', $price, PDO::PARAM_INT);
+            $stmt->bindParam(':note_id', $note_id, PDO::PARAM_INT);
             $stmt->execute();
         } catch (PDOException $e) {
             echo "ERROR: " . $e->getMessage();

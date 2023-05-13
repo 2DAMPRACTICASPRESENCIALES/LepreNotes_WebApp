@@ -7,10 +7,9 @@ function startPage()  // Web App start
   $conecction = new Conecction(); //Creamos un objeto conexion
   $conecction->getConection(); //Abrimos conexion
   include('./view/header_view.php');
+  require_once('./model/login_model.php');
   include('./view/login_view.php');
-  require('./model/login_model.php');
   include('./view/footer_view.php');
-  checkLogin(); 
 }
 
 function listPage() {

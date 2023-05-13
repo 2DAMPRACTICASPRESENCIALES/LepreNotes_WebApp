@@ -6,8 +6,14 @@
             <form method="POST" action="" class="form-login">
 
                 <div class="form-group">
-                  <label for="name">Email </label>
-                  <input type="text" name="email" id="email" value="" class="form-control">
+                  <label for="name">Username </label>
+                  <input type="text" name="username" id="username" value="" class="form-control">
+                  <div class="errors"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email </label>
+                  <input type="email" name="email" id="email" class="form-control">
                   <div class="errors"></div>
                 </div>
 
@@ -65,6 +71,7 @@
       font-weight: 500;
     }
   
+    input[type="username"],
     input[type="email"],
     input[type="password"] {
       background-color: #f5f5f5;
@@ -88,4 +95,3 @@
       border: none;
     }
   </style>
-      

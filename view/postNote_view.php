@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    $user_id = $_SESSION['id'];
+    if($user_id == null || $user_id == '') {
+        session_destroy();
+        header('Location:index.php');
+    }
+?>
+
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">LepreNotes</a>
@@ -8,10 +17,10 @@
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.php">Notes</a>
+                    <a class="nav-link" aria-current="page" href="index.php?controller=initial&action=listPage">Notes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
+                    <a class="nav-link" href="index.php?controller=user&action=listUsers">Users</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Switch account</a>
@@ -67,7 +76,7 @@
 
             if($title != '' && $subject != '' && $school_year != '' && $price != '' && $_FILES["pdfContent"]["type"] == "application/pdf") {
                  
-                addNote($title, $subject, $school_year, $price, $name);
+                addNote($title, $subject, $school_year, $price, $name, $user_id);
 
                 $carpeta_destino = './resources/pdfs/';
                 $ruta_archivo_destino = $carpeta_destino . $name;
