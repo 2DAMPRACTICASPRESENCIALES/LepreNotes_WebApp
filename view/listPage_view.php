@@ -23,10 +23,10 @@
                     <a class="nav-link" href="index.php?controller=user&action=listUsers">Users</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Switch account</a>
+                    <a class="nav-link" href="index.php?controller=note&action=publishNote">Publish</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?controller=note&action=publishNote">Publish</a>
+                    <a class="nav-link" href="index.php?controller=initial&action=signout">Switch account</a>
                 </li>
             </ul>
         </div>
@@ -37,7 +37,7 @@
     <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
         <img class="me-3" src="./resources/img/logo-leprenotes.png" alt="" width="48" height="38">
         <div class="lh-1">
-            <h1 class="h6 mb-0 text-white lh-1">LepreNotes</h1>
+            <h1 class="h6 mb-0 mr-20 text-white lh-1">LepreNotes</h1>
             <small>Learning has never been so easy</small>
         </div>
     </div>

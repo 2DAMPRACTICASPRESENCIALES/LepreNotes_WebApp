@@ -18,6 +18,7 @@
                 </div>
 
                 <input type="submit" class="btn btn-primary" value="Log in"><br>
+                <a class="btn btn-secondary" style='margin-top:15px;' href="index.php?controller=initial&action=registerUser">Register</a>
 
                 <?php
                   if (isset($_POST['email'], $_POST['password'])) {
@@ -40,9 +41,8 @@
       height: 100vh;
       justify-content: center;
       align-items: center;
-      background-image: url(../logo-leprenotes-2.jpg);
+      background-image: url(./resources/img/logo-leprenotes-2.png);
       background-repeat: repeat;
-      opacity: 0.7;
     }
   
     .card {
@@ -52,6 +52,7 @@
     }
   
     .btn-primary {
+      width: 100%;
       background-color: #ffc107;
       border-color: #ffc107;
     }
@@ -59,6 +60,17 @@
     .btn-primary:hover {
       background-color: #e0a800;
       border-color: #e0a800;
+    }
+
+    .btn-secondary {
+      width: 100%;
+      background-color: #ecab0f;
+      border-color: #ecab0f;
+    }
+  
+    .btn-secondary:hover {
+      background-color: #ecab0f;
+      border-color: #ecab0f;
     }
   
     label {

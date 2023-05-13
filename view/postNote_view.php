@@ -23,10 +23,10 @@
                     <a class="nav-link" href="index.php?controller=user&action=listUsers">Users</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Switch account</a>
+                    <a class="nav-link active" href="index.php?controller=note&action=publishNote">Publish</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.php?controller=note&action=publishNote">Publish</a>
+                    <a class="nav-link" href="index.php?controller=initial&action=signout">Switch account</a>
                 </li>
             </ul>
         </div>

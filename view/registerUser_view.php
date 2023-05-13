@@ -2,7 +2,7 @@
       <div class="row justify-content-center mt-5">
         <div class="col-md-6 col-lg-4">
           <div class="card p-4">
-            <h3 class="text-center mb-4">Sign in</h3>
+            <h3 class="text-center mb-4">Sign up</h3>
             <form method="POST" action="" class="form-login">
 
                 <div class="form-group">
@@ -23,13 +23,21 @@
                   <div class="errors"></div>
                 </div>
 
-                <input type="submit" class="btn btn-primary" value="Log in"><br>
+                <input type="submit" class="btn btn-primary" value="Register"><br>
+                <a class="btn btn-secondary" style='margin-top:15px;' href="index.php">Back</a>
 
                 <?php
-                  if (isset($_POST['email'], $_POST['password'])) {
+                  if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
+                    $username = $_POST['username'];
                     $email = $_POST['email'];
                     $passwrd = $_POST['password'];
-                    checkLogin($email, $passwrd);
+
+                    if($username != '' && $email != '' && $passwrd != '') {
+                        addUser($username, $email, $passwrd);
+                        echo "<div class='alert alert-success' role='alert'> ¡You are registred! </div>";
+                    } else {
+                        echo "<div class='mt-2 alert alert-danger' role='alert'> The fields can't be empty! </div>";
+                    }
                   }
                 ?>
           </div>
@@ -46,9 +54,8 @@
       height: 100vh;
       justify-content: center;
       align-items: center;
-      background-image: url(../logo-leprenotes-2.jpg);
+      background-image: url(./resources/img/logo-leprenotes-2.png);
       background-repeat: repeat;
-      opacity: 0.7;
     }
   
     .card {
@@ -58,13 +65,19 @@
     }
   
     .btn-primary {
+      width: 100%;
       background-color: #ffc107;
       border-color: #ffc107;
     }
   
     .btn-primary:hover {
+      width: 100%;
       background-color: #e0a800;
       border-color: #e0a800;
+    }
+
+    .btn-secondary {
+      width: 100%;
     }
   
     label {

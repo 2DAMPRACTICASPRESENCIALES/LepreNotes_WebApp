@@ -20,3 +20,16 @@ function listPage() {
   include('./view/footer_view.php');
 }
 
+function registerUser() {
+  include('./view/header_view.php');
+  require_once('./model/user_model.php');
+  include('./view/registerUser_view.php');
+  include('./view/footer_view.php');
+}
+
+function signout() {
+  session_start();
+  session_destroy();
+  header('refresh:1;url=index.php');
+}
+
